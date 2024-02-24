@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MachineTestActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLeft"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_20dp"
+        android:paddingHorizontal="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnMoveRight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/row_machine_test" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRight"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:paddingHorizontal="@dimen/_10dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMoveRight"
+        app:layout_constraintTop_toTopOf="@id/rvLeft"
+        tools:listitem="@layout/row_machine_test" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMoveRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/_5dp"
+        android:text="@string/btn_move_right"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/_10dp"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toStartOf="@id/rvRight"
+        app:layout_constraintStart_toEndOf="@id/rvLeft"
+        app:layout_constraintTop_toTopOf="@id/guideTop" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMoveLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:padding="@dimen/_5dp"
+        android:text="@string/btn_move_left"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintEnd_toEndOf="@id/btnMoveRight"
+        app:layout_constraintStart_toStartOf="@id/btnMoveRight"
+        app:layout_constraintTop_toTopOf="@id/guideCenter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

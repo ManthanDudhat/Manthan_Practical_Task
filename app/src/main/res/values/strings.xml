@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Manthan Practical Android</string>
+    <string name="btn_move_right"><![CDATA[Move Right\n>]]></string>
+    <string name="btn_move_left"><![CDATA[Move Left\n<]]></string>
+    <string name="btn_task_one">Task One</string>
+    <string name="btn_task_two">Task Two</string>
+</resources>
